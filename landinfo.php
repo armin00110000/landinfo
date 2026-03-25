@@ -6,7 +6,7 @@ $fehler = null;
 if (isset($_GET['name']) && $_GET['name'] != '') {
 
     $name     = $_GET['name'];
-    $apiUrl   = 'https://restcountries.com/v3.1/name/' . urlencode($name) . '?fullText=true';
+    $apiUrl   = 'https://restcountries.com/v3.1/name/' . rawurlencode($name) . '?fullText=true';
     $response = file_get_contents($apiUrl);
 
     if ($response == false) {

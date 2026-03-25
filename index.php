@@ -41,7 +41,7 @@ usort($laender, function($a, $b) {
             $flagge = $land['flags']['png'];
             ?>
 
-            <a class="land-karte" href="landinfo.php?name=<?php echo urlencode($name); ?>">
+            <a class="land-karte" href="landinfo.php?name=<?php echo rawurlencode($name); ?>">
                 <img src="<?php echo $flagge; ?>" alt="Flagge von <?php echo $name; ?>">
                 <p><?php echo $name; ?></p>
             </a>

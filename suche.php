@@ -6,7 +6,7 @@ $fehler   = null;
 if (isset($_GET['land']) && $_GET['land'] != '') {
 
     $suchbegriff = $_GET['land'];
-    $apiUrl      = 'https://restcountries.com/v3.1/name/' . urlencode($suchbegriff);
+    $apiUrl      = 'https://restcountries.com/v3.1/name/' . rawurlencode($suchbegriff) . '?fullText=true';
     $response    = file_get_contents($apiUrl);
 
     if ($response == false) {
