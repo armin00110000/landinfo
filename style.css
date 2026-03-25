@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #8c5252;
     color: #333333;
     margin: 0;
     padding: 0;
@@ -49,7 +49,7 @@ nav a:hover {
     text-align: center;
     text-decoration: none;
     color: #333333;
-    background-color: #f9f9f9;
+    background-color: whitesmoke;
 }
 
 .land-karte:hover {
@@ -98,6 +98,7 @@ nav a:hover {
     border: 1px solid #cccccc;
     padding: 20px;
     max-width: 400px;
+    background-color: whitesmoke ;
 }
 
 .ergebnis img {
@@ -123,6 +124,7 @@ nav a:hover {
     border: 1px solid #cccccc;
     padding: 20px;
     max-width: 500px;
+    background-color: whitesmoke;
 }
 
 .detail-box h2 {
