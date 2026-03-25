@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #116528;
+    color: white;
+    padding: 16px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 20px;
+}
+
+/* index.php */
+
+.laender-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.land-karte {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #333333;
+    background-color: #f9f9f9;
+}
+
+.land-karte:hover {
+    background-color: #6cf39e;
+}
+
+.land-karte img {
+    width: 100%;
+    height: 70px;
+    object-fit: cover;
+}
+
+.land-karte p {
+    margin: 6px 0 0 0;
+    font-size: 0.85rem;
+}
+
+/* suche.php */
+
+.suchformular {
+    margin-bottom: 20px;
+}
+
+.suchformular input[type="text"] {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #aaaaaa;
+    width: 280px;
+}
+
+.suchformular button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #1a3a5c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+.suchformular button:hover {
+    background-color: #2e6da4;
+}
+
+.ergebnis {
+    border: 1px solid #cccccc;
+    padding: 20px;
+    max-width: 400px;
+}
+
+.ergebnis img {
+    width: 200px;
+    display: block;
+    margin-bottom: 12px;
+    border: 1px solid #cccccc;
+}
+
+.ergebnis p {
+    margin: 6px 0;
+}
+
+.ergebnis a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #1a3a5c;
+}
+
+/* landinfo.php */
+
+.detail-box {
+    border: 1px solid #cccccc;
+    padding: 20px;
+    max-width: 500px;
+}
+
+.detail-box h2 {
+    margin-top: 0;
+}
+
+.detail-box img {
+    width: 220px;
+    display: block;
+    margin-bottom: 14px;
+    border: 1px solid #cccccc;
+}
+
+.detail-box p {
+    margin: 6px 0;
+}
+
+/* Fehlermeldung */
+
+.fehler {
+    color: #cc0000;
+    margin-top: 10px;
+}
+
+/* Zurück-Link */
+
+.zurueck {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #1a3a5c;
+    text-decoration: none;
+}
+
+.zurueck:hover {
+    text-decoration: underline;
+    color: #116528;
+    background-color: #6cf39e;
+}
