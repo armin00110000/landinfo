@@ -56,20 +56,31 @@ if (isset($_GET['name']) && $_GET['name'] != '') {
         <?php
         // Alle Werte vorbereiten
         $name         = $land['name']['common'];
-        $hauptstadt   = $land['capital'][0];
+        $hauptstadt   = $land['capital'][0] ?? 'Keine Hauptstadt';
         $region       = $land['region'];
-        $bevoelkerung = number_format($land['population'], 0, ',', '.');
-        $flaeche      = number_format($land['area'], 0, ',', '.');
+        $bevoelkerung = number_format($land['population'], 0, ',', '.') ?? 'Keine Daten';
+        $flaeche      = number_format($land['area'], 0, ',', '.') ?? 'Keine Daten';
         $flagge       = $land['flags']['png'];
 
         // Sprachen zusammenbauen
-        $sprachen = implode(', ', $land['languages']);
+        if (isset($land['languages']) && is_array($land['languages'])) {
+            $sprachen = implode(', ', $land['languages']);
+        } else {
+            $sprachen = 'Keine Daten';
+        }
 
-        // Währungen zusammenbauen
+         // Währungen zusammenbauen
         $waehrungen = '';
-        foreach ($land['currencies'] as $code => $info) {
+  if (isset($land['currencies']) && is_array($land['currencies'])) {
+            foreach ($land['currencies'] as $code => $info) {
             $waehrungen .= $info['name'] . ' (' . $info['symbol'] . ') ';
         }
+        } else {
+            $waehrungen = 'Keine Daten';
+        }
+       
+          
+      
         ?>
 
         <div class="detail-box">
